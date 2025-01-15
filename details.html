@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes</title>
+    <link rel="stylesheet" href="css/details.css">
+    <link rel="stylesheet" href="css/modal.css"> <!-- Estilos para o modal -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"> <!-- Ícones -->
+</head>
+<body>
+    <div class="container">
+        <!-- Botão de Voltar -->
+        <a href="search.html" class="back-button"><i class="fas fa-arrow-left"></i> Voltar</a>
+
+        <h1>Detalhes do Item</h1>
+
+        <div id="details">
+            <p><strong>ID:</strong> <span id="detail-id"></span></p>
+            <p><strong>Nome:</strong> <span id="detail-name"></span></p>
+            <p><strong>Email:</strong> <span id="detail-email"></span></p>
+        </div>
+
+        <button id="reimprimir-btn" onclick="mostrarModalReimpressao()">Reimprimir</button>
+    </div>
+
+    <!-- Modal de Reimpressão -->
+    <div id="modal-reimpressao" class="modal">
+        <div class="modal-content">
+            <span id="close-reimpressao" class="close">&times;</span>
+            <h2>Reimprimir Detalhes</h2>
+            <div id="modal-details">
+                <p><strong>ID:</strong> <span id="modal-id"></span></p>
+                <p><strong>Nome:</strong> <span id="modal-name"></span></p>
+                <p><strong>Email:</strong> <span id="modal-email"></span></p>
+            </div>
+            <button id="reimprimir-confirm-btn">Reimprimir</button>
+        </div>
+    </div>
+
+    <script src="js/details.js"></script>
+</body>
+</html>

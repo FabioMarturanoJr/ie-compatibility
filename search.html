@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa</title>
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/modal.css"> <!-- Estilos para o modal -->
+</head>
+<body>
+    <div class="container">
+        <h1>Pesquisa</h1>
+
+        <input type="text" id="search-query" placeholder="Pesquisar...">
+        <button onclick="pesquisar()">Pesquisar</button>
+
+        <table id="result-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Detalhes</th>
+                </tr>
+            </thead>
+            <tbody id="result-body">
+                <!-- Os resultados serão preenchidos aqui -->
+            </tbody>
+        </table>
+
+        <div class="modal" id="modal-reimpressao">
+            <div class="modal-content">
+                <span class="close" onclick="fecharModal()">×</span>
+                <h2>Confirmar Ação</h2>
+                <p>Deseja visualizar os detalhes do item selecionado?</p>
+                <button id="modal-btn-confirm">Sim</button>
+                <button id="modal-btn-cancel">Não</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/search.js"></script>
+</body>
+</html>
